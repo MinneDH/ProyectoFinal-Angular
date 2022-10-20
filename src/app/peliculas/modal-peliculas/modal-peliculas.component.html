@@ -1,29 +1,54 @@
-<div class="mt-3">
-    <h1><b>Agregar Pelicula</b></h1>
-</div>
-
-<form [formGroup]="formularioPeliculas" autocomplete="off">
-
-    <mat-form-field class="col-md-3">
-        <mat-label>Nombre</mat-label>
-        <input matInput formControlName="Nombre"/>
-    </mat-form-field>
-
-    <mat-form-field class="col-md-3">
-        <mat-label>Año</mat-label>
-        <input matInput formControlName="Ano" type="number"/>
-    </mat-form-field>
-
-    <mat-form-field class="col-md-3">
-        <mat-label>Genero</mat-label>
-        <input matInput formControlName="Genero"/>
-    </mat-form-field>
-</form>
-
-<div class="row">
-    <div class="col-6 text-end">
-        <button mat-raised-button color="primary" type="button" (click)="guardarFormulario()">Guardar
-            <mat-icon>save</mat-icon>
-        </button>
+<div class="container">
+    <div class="mt-3">
+        <h1><b>Agregar Pelicula</b></h1>
     </div>
+
+    <form [formGroup]="formularioPeliculas" autocomplete="off" (ngSubmit)="guardarFormulario()">
+        <div class="col">
+            <mat-form-field class="w-50">
+                <mat-label>Nombre</mat-label>
+                <input matInput formControlName="Nombre"/>
+            </mat-form-field>
+
+            <div *ngIf="(nombre?.dirty || nombre?.touched) && nombre?.errors">
+                <mat-error *ngIf="nombre?.errors?.['required']">El nombre de la pelicula es requerido.</mat-error>
+                <mat-error *ngIf="nombre?.errors?.['minlength']">El nombre de la pelicula debe contener al menos 5 caracteres.</mat-error>
+                <mat-error *ngIf="nombre?.errors?.['maxlength']">El nombre de la pelicula no debe superar los 100 caracteres.</mat-error>
+            </div>
+        </div>
+
+        <div class="col">
+            <mat-form-field class="w-50">
+                <mat-label>Año</mat-label>
+                <input matInput formControlName="Ano" type="number"/>
+            </mat-form-field>
+
+            <div *ngIf="(ano?.dirty || ano?.touched) && ano?.errors">
+                <mat-error *ngIf="ano?.errors?.['required']">El año de la pelicula es requerido.</mat-error>
+            </div>
+        </div>
+
+        <div class="col">
+            <mat-form-field class="w-50">
+                <mat-label>Genero</mat-label>
+                <input matInput formControlName="Genero"/>
+            </mat-form-field>
+
+            <div *ngIf="(genero?.dirty || genero?.touched) && genero?.errors">
+                <mat-error *ngIf="genero?.errors?.['required']">El genero de la pelicula es requerido.</mat-error>
+                <mat-error *ngIf="genero?.errors?.['minlength']">El genero de la pelicula debe contener al menos 5 caracteres.</mat-error>
+                <mat-error *ngIf="genero?.errors?.['maxlength']">El genero de la pelicula no debe superar los 100 caracteres.</mat-error>
+            </div>
+        </div>
+
+
+        <div class="row mt-3">
+            <div class="text-end">
+                <button mat-raised-button color="primary" type="submit" [disabled]="formularioPeliculas.invalid" class="me-5"> Guardar <mat-icon> save </mat-icon> </button>
+                <button mat-raised-button color="secondary" type="button" [routerLink]="['/peliculas']" > Regresar <mat-icon>close</mat-icon> </button>
+            </div>
+        </div>
+
+    </form>
+
 </div>

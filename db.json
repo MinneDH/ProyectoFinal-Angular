@@ -1,127 +1,132 @@
 {
-    "peliculas":[
-        {
-            "id": 1,
-            "Nombre": "Toy Story 3",
-            "Ano": 2011,
-            "Genero": " Aventura/Infantil"
-        },
-        {
-            "id": 2,
-            "Nombre": "Réquiem por un sueño ",
-            "Ano": 2000,
-            "Genero": " Drama/Thriller psicológico"
-        },
-        {
-            "id": 3,
-            "Nombre": "Your name",
-            "Ano": 2016,
-            "Genero": "Romance/Fantasía"
-        },
-        {
-            "id": 4,
-            "Nombre": "El indomable Will Hunting",
-            "Ano": 1997,
-            "Genero": "Drama/Romance"
-        },
-        {
-            "id": 5,
-            "Nombre": "Érase una vez en América",
-            "Ano": 1984,
-            "Genero": "Crimen/Drama"
-        },
-        {
-            "id": 6,
-            "Nombre": "La princesa Mononoke",
-            "Ano": 1997,
-            "Genero": "Fantasía/Aventura"
-        },
-        {
-            "id": 7,
-            "Nombre": "La princesa Mononoke",
-            "Ano": 1997,
-            "Genero": "Fantasía/Aventura"
-        },
-        {
-            "id": 8,
-            "Nombre": "Avengers: Endgame",
-            "Ano": 2019,
-            "Genero": "Acción/Ciencia ficción"
-        },
-        {
-            "id": 9,
-            "Nombre": "Malditos bastardos",
-            "Ano": 2009,
-            "Genero": "Bélico/Acción"
-        },
-        {
-            "id": 10,
-            "Nombre": "Coco",
-            "Ano": 2017,
-            "Genero": "Infantil/Comedia"
-        }
-    ],
-
-    "series":[
-        {
-            "id": 1,
-            "Nombre": "Stranger Things",
-            "Ano": 2016,
-            "Genero": "Misterio "
-        },
-        {
-            "id": 2,
-            "Nombre": "El juego del calamar",
-            "Ano": 2021,
-            "Genero": "Drama "
-        },
-        {
-            "id": 3,
-            "Nombre": "The Mandalorian",
-            "Ano": 2019,
-            "Genero": "Space western"
-        },
-        {
-            "id": 4,
-            "Nombre": "La Casa de Papel",
-            "Ano": 2017 ,
-            "Genero": "Suspenso"
-        },
-        {
-            "id": 5,
-            "Nombre": "House",
-            "Ano": 2004,
-            "Genero": "Drama "
-        },
-        {
-            "id": 6,
-            "Nombre": "Grey's Anatomy",
-            "Ano": 2005,
-            "Genero": "Drama"
-        },
-        {
-            "id": 7,
-            "Nombre": "The Big Bang Theory",
-            "Ano": 2007 ,
-            "Genero": "Comedia de situación"
-        },
-        {
-            "id": 8,
-            "Nombre": "Prison Break",
-            "Ano": 2005,
-            "Genero": "Drama "
-        },
-        {
-            "id": 9,
-            "Nombre": "Dark",
-            "Ano": 2017,
-            "Genero": "Misterio "
-        },
-        {
-            "id": 10,
-            "Nombre": "Vikingos",
-            "Ano": 2013,
-            "Genero": "Aventura "
-        }
-    ]
+  "peliculas": [
+    {
+      "id": 1,
+      "Nombre": "Toy Story 3",
+      "Ano": 2011,
+      "Genero": " Aventura/Infantil"
+    },
+    {
+      "id": 2,
+      "Nombre": "Réquiem por un sueño ",
+      "Ano": 2000,
+      "Genero": " Drama/Thriller psicológico"
+    },
+    {
+      "id": 3,
+      "Nombre": "Your name",
+      "Ano": 2016,
+      "Genero": "Romance/Fantasía"
+    },
+    {
+      "id": 4,
+      "Nombre": "El indomable Will Hunting",
+      "Ano": 1997,
+      "Genero": "Drama/Romance"
+    },
+    {
+      "id": 5,
+      "Nombre": "Érase una vez en América",
+      "Ano": 1984,
+      "Genero": "Crimen/Drama"
+    },
+    {
+      "id": 6,
+      "Nombre": "La princesa Mononoke",
+      "Ano": 1997,
+      "Genero": "Fantasía/Aventura"
+    },
+    {
+      "id": 7,
+      "Nombre": "La princesa Mononoke",
+      "Ano": 1997,
+      "Genero": "Fantasía/Aventura"
+    },
+    {
+      "id": 8,
+      "Nombre": "Avengers: Endgame",
+      "Ano": 2019,
+      "Genero": "Acción/Ciencia ficción"
+    },
+    {
+      "id": 9,
+      "Nombre": "Malditos bastardos",
+      "Ano": 2009,
+      "Genero": "Bélico/Acción"
+    },
+    {
+      "id": 10,
+      "Nombre": "Coco",
+      "Ano": 2017,
+      "Genero": "Infantil/Comedia"
+    },
+    {
+      "Nombre": "prueba2",
+      "Ano": 2022,
+      "Genero": "prueba2",
+      "id": 12
+    }
+  ],
+  "series": [
+    {
+      "id": 1,
+      "Nombre": "Stranger Things",
+      "Ano": 2016,
+      "Genero": "Misterio "
+    },
+    {
+      "id": 2,
+      "Nombre": "El juego del calamar",
+      "Ano": 2021,
+      "Genero": "Drama "
+    },
+    {
+      "id": 3,
+      "Nombre": "The Mandalorian",
+      "Ano": 2019,
+      "Genero": "Space western"
+    },
+    {
+      "id": 4,
+      "Nombre": "La Casa de Papel",
+      "Ano": 2017,
+      "Genero": "Suspenso"
+    },
+    {
+      "id": 5,
+      "Nombre": "House",
+      "Ano": 2004,
+      "Genero": "Drama "
+    },
+    {
+      "id": 6,
+      "Nombre": "Grey's Anatomy",
+      "Ano": 2005,
+      "Genero": "Drama"
+    },
+    {
+      "id": 7,
+      "Nombre": "The Big Bang Theory",
+      "Ano": 2007,
+      "Genero": "Comedia de situación"
+    },
+    {
+      "id": 8,
+      "Nombre": "Prison Break",
+      "Ano": 2005,
+      "Genero": "Drama "
+    },
+    {
+      "id": 9,
+      "Nombre": "Dark",
+      "Ano": 2017,
+      "Genero": "Misterio "
+    },
+    {
+      "id": 10,
+      "Nombre": "Vikingos",
+      "Ano": 2013,
+      "Genero": "Aventura "
+    }
+  ]
 }
