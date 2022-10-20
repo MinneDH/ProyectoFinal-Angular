@@ -19,4 +19,16 @@ export class PeliculaService {
   savePeliculas(pelicula:Peliculas):Observable<any>{
     return this.http.post(`${this.url}peliculas`,pelicula);
   }
+
+  getPeliculaById(id:number):Observable<Peliculas>{
+    return this.http.get<Peliculas>(`${this.url}peliculas/${id}`);
+  }
+
+  updatePelicula(id:number, pelicula:Peliculas){
+    return this.http.put(`${this.url}peliculas/${id}`, pelicula);
+  }
+
+  deletePelicula(id:number){
+    return this.http.delete(`${this.url}peliculas/${id}`);
+  }
 }
