@@ -1,0 +1,29 @@
+<div class="mt-3">
+    <h1><b>Agregar Pelicula</b></h1>
+</div>
+
+<form [formGroup]="formularioPeliculas" autocomplete="off">
+
+    <mat-form-field class="col-md-3">
+        <mat-label>Nombre</mat-label>
+        <input matInput formControlName="Nombre"/>
+    </mat-form-field>
+
+    <mat-form-field class="col-md-3">
+        <mat-label>Año</mat-label>
+        <input matInput formControlName="Ano" type="number"/>
+    </mat-form-field>
+
+    <mat-form-field class="col-md-3">
+        <mat-label>Genero</mat-label>
+        <input matInput formControlName="Genero"/>
+    </mat-form-field>
+</form>
+
+<div class="row">
+    <div class="col-6 text-end">
+        <button mat-raised-button color="primary" type="button" (click)="guardarFormulario()">Guardar
+            <mat-icon>save</mat-icon>
+        </button>
+    </div>
+</div>

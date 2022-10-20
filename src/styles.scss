@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.mat-form-field {padding: 16px 10px 0;}
+
+@import "../node_modules/@fortawesome/fontawesome-free/css/all.min.css";
+
+@import "styles/variables";
+
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+@import "../node_modules/bootstrap/scss/reboot";
+
+@import "../node_modules/bootstrap/scss/containers"; // Add .container and .container-fluid classes
+@import "../node_modules/bootstrap/scss/grid"; // Add the grid system
+
+@import "../node_modules/bootstrap/scss/utilities"; // Configures the utility classes that should be generated
+@import "../node_modules/bootstrap/scss/utilities/api"; // Generates the actual utility classes
+
+@import "styles/reset";
