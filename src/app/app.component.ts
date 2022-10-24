@@ -1,6 +1,9 @@
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component } from '@angular/core';
-import { PeliculaService } from './services/peliculas/pelicula.service';
-import { SerieService } from './services/series/serie.service';
+import { Router } from '@angular/router';
+import { map, Observable, shareReplay } from 'rxjs';
+import { AuthService } from './services/auth.service';
+
 
 @Component({
   selector: 'app-root',
@@ -10,17 +13,16 @@ import { SerieService } from './services/series/serie.service';
 export class AppComponent {
   title = 'ProyectoApp';
 
-  constructor(private ServicioPeliculas:PeliculaService, private ServiciosSeries:SerieService){
+  isHandset$:Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset).pipe(map(result => result.matches),shareReplay());
+  
+  constructor( private breakpointObserver: BreakpointObserver, public authService:AuthService, private router:Router){}
 
-    this.ServicioPeliculas.getPeliculas().subscribe(peliculas => {
-      console.log(peliculas);
-    });
 
-    this.ServiciosSeries.getSeries().subscribe(series => {
-      console.log(series);
-    });
-
+  logout(){
+    this.authService.logout();
+    this.router.navigateByUrl('/login');
   }
+
 }
 
 

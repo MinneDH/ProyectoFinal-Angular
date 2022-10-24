@@ -61,10 +61,10 @@
       "Genero": "Infantil/Comedia"
     },
     {
-      "Nombre": "prueba2",
+      "Nombre": "PRUEBA",
       "Ano": 2022,
-      "Genero": "prueba2",
-      "id": 12
+      "Genero": "PRUEBA",
+      "id": 11
     }
   ],
   "series": [
@@ -127,6 +127,19 @@
       "Nombre": "Vikingos",
       "Ano": 2013,
       "Genero": "Aventura "
+    },
+    {
+      "Nombre": "PRUEBA",
+      "Ano": 2022,
+      "Genero": "PRUEBA",
+      "id": 11
+    }
+  ],
+  "users": [
+    {
+      "email": "mdrouaillet@uv.mx",
+      "password": "$2a$10$NOOxvBTKgQmDu2xMccs.zeCeZUrNFWGE/iVCngsBxc0sQ3EAblL.y",
+      "id": 1
     }
   ]
 }

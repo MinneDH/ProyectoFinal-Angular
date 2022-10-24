@@ -39,7 +39,7 @@ export class ListadoPeliculasComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(res => {
-      if(res === 'Si'){
+      if(res==='Si'){
         this.ServicioPeliculas.deletePelicula(id).subscribe( res => {
           this.SnackBar.open('La pelicula fue eliminada exitosamente','',{
             duration:3000
