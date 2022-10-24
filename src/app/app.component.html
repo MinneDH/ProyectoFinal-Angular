@@ -1,1 +1,34 @@
-<router-outlet></router-outlet>
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport
+        [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+        [mode]="(isHandset$ | async) ? 'over' : 'side'"
+        [opened]="(isHandset$ | async) === false">
+      <mat-toolbar><i class="fa-solid fa-house"></i>&nbsp;Menu</mat-toolbar>
+      <mat-nav-list>
+        <a mat-list-item routerLink="/peliculas" *ngIf="authService.isLoggedIn$ | async">
+          <i class="fa-solid fa-film"></i>&nbsp;Peliculas
+        </a>
+        <a mat-list-item routerLink="/series" *ngIf="authService.isLoggedIn$ | async">
+          <i class="fa-solid fa-video"></i>&nbsp;Series
+        </a>
+        <a mat-list-item routerLink="/register" *ngIf="authService.isLoggedOut$ | async">
+            <i class="fa-solid fa-user"></i>&nbsp;Registrarse
+        </a>
+        <a mat-list-item routerLink="/login" *ngIf="authService.isLoggedOut$ | async" >
+          <i class="fa-solid fa-right-to-bracket"></i>&nbsp;Acceder
+        </a>
+        <a mat-list-item (click)="logout()" *ngIf="authService.isLoggedIn$ | async" >
+          <i class="fa-solid fa-door-open"></i>&nbsp;Salir
+        </a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar color="primary">
+        <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" *ngIf="isHandset$ | async">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <span>PROYECTO FINAL</span>
+      </mat-toolbar>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

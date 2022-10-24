@@ -54,7 +54,6 @@ export class ModalPeliculasComponent implements OnInit {
       this.SnackBar.open('La pelicula fue agregada exitosamente','',{
         duration:3000
       });
-      this.router.navigate(['/categorias'])
       this.router.navigate(['/peliculas']);
     });
   }
@@ -69,7 +68,6 @@ export class ModalPeliculasComponent implements OnInit {
   }
 
   getControlFormulario = (valor:string) => this.formularioPeliculas.get(valor);
-
   get nombre(){return this.getControlFormulario('Nombre');}
   get genero(){return this.getControlFormulario('Genero');}
   get ano(){return this.getControlFormulario('Ano');}

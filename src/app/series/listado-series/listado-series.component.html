@@ -35,6 +35,18 @@
             <mat-cell *matCellDef="let row"> {{row.Genero}} </mat-cell>
         </ng-container>
 
+        <ng-container matColumnDef="Acciones">
+            <mat-header-cell *matHeaderCellDef> Acciones </mat-header-cell>
+            <mat-cell *matCellDef="let row">
+                <button mat-stroked-button routerLink="{{row.id}}" class="me-3">
+                    <mat-icon>edit</mat-icon> Editar
+                </button>
+                <button mat-stroked-button color="accent" (click)="EliminarSerie(row.id)" >
+                    <mat-icon>delete</mat-icon> Elimiar
+                </button>
+            </mat-cell>
+        </ng-container>
+
         <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
         <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
 
